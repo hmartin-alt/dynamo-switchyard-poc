@@ -101,7 +101,7 @@ kubectl create secret generic hf-token-secret \
   -n dynamo
 
 kubectl apply -f manifests/dynamo/prefetch-job.yaml -n dynamo
-kubectl get pod -n dynamo -l job-name=prefetch-models -w
+kubectl logs -f -n dynamo -l job-name=prefetch-models
 ```
 
 Wait for `All models downloaded.` before proceeding.
