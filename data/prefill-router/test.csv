@@ -1,0 +1,21 @@
+question,model,isCorrect,output_tokens
+mainstays kitchen,efficient,1,50
+mainstays kitchen,capable,1,100
+i see without my eyes book,efficient,1,50
+i see without my eyes book,capable,1,100
+boco gear face mask,efficient,1,50
+boco gear face mask,capable,1,100
+solid gold wedding band for men,efficient,0,50
+solid gold wedding band for men,capable,0,100
+head lamps for adults,efficient,0,50
+head lamps for adults,capable,0,100
+oracal heat transfer vinyl,efficient,1,50
+oracal heat transfer vinyl,capable,0,100
+1.50 mens xl reading glasses without nose piece,efficient,1,50
+1.50 mens xl reading glasses without nose piece,capable,1,100
+20 pound weights,efficient,0,50
+20 pound weights,capable,0,100
+"035 super clamp without stud, includes 035wdg wedge",efficient,0,50
+"035 super clamp without stud, includes 035wdg wedge",capable,1,100
+magic party decorations,efficient,0,50
+magic party decorations,capable,0,100

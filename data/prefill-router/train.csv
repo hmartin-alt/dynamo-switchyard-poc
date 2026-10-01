@@ -1,0 +1,81 @@
+question,model,isCorrect,output_tokens
+triton boat decals,efficient,0,50
+triton boat decals,capable,1,100
+300 watt ion bluetooth speaker,efficient,1,50
+300 watt ion bluetooth speaker,capable,0,100
+charcuterie board cookbook,efficient,0,50
+charcuterie board cookbook,capable,0,100
+payless shoes for women,efficient,0,50
+payless shoes for women,capable,0,100
+piano accordion for adults,efficient,0,50
+piano accordion for adults,capable,0,100
+wrangler western shirts for men,efficient,1,50
+wrangler western shirts for men,capable,0,100
+upenn hat,efficient,0,50
+upenn hat,capable,1,100
+bark slices,efficient,1,50
+bark slices,capable,1,100
+armpocket armband iphone 7 plus,efficient,0,50
+armpocket armband iphone 7 plus,capable,0,100
+husqvarna 125b,efficient,1,50
+husqvarna 125b,capable,1,100
+sanus blt2-b1,efficient,1,50
+sanus blt2-b1,capable,1,100
+kohler gleam 2-piece chair height elongated skirted,efficient,0,50
+kohler gleam 2-piece chair height elongated skirted,capable,0,100
+cat cloud climbing frame cat toy,efficient,0,50
+cat cloud climbing frame cat toy,capable,0,100
+winsheild,efficient,1,50
+winsheild,capable,0,100
+bowflex e216,efficient,1,50
+bowflex e216,capable,0,100
+scallops seafood,efficient,0,50
+scallops seafood,capable,0,100
+gold curyain rod,efficient,1,50
+gold curyain rod,capable,1,100
+mini building block military,efficient,1,50
+mini building block military,capable,0,100
+msr x6,efficient,0,50
+msr x6,capable,0,100
+blueberry rx bars,efficient,1,50
+blueberry rx bars,capable,1,100
+leatherman raptor shears,efficient,0,50
+leatherman raptor shears,capable,0,100
+mountain bike,efficient,1,50
+mountain bike,capable,1,100
+navy 84 inch curtains,efficient,0,50
+navy 84 inch curtains,capable,1,100
+brooks ghost 12 women,efficient,1,50
+brooks ghost 12 women,capable,1,100
+sports water system,efficient,0,50
+sports water system,capable,0,100
+dosge ramcharger panel,efficient,0,50
+dosge ramcharger panel,capable,1,100
+1 5/8 pop up drain without overflow,efficient,1,50
+1 5/8 pop up drain without overflow,capable,1,100
+not pee dog,efficient,0,50
+not pee dog,capable,0,100
+baking pans 10x15,efficient,0,50
+baking pans 10x15,capable,0,100
+express pencils,efficient,0,50
+express pencils,capable,0,100
+womans addidas coolmax low cut socks,efficient,0,50
+womans addidas coolmax low cut socks,capable,0,100
+volleyball knee pads girls,efficient,1,50
+volleyball knee pads girls,capable,1,100
+smart adult toy,efficient,0,50
+smart adult toy,capable,0,100
+tank m2,efficient,1,50
+tank m2,capable,1,100
+iphone 7 plus charger cord 3ft,efficient,0,50
+iphone 7 plus charger cord 3ft,capable,0,100
+srcool7krm,efficient,1,50
+srcool7krm,capable,1,100
+2' pink balloon,efficient,1,50
+2' pink balloon,capable,0,100
+ladies black over calf socks,efficient,0,50
+ladies black over calf socks,capable,0,100
+glitter glue,efficient,1,50
+glitter glue,capable,1,100
+work will suck without you water bottle,efficient,0,50
+work will suck without you water bottle,capable,0,100

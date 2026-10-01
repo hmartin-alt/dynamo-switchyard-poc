@@ -1,0 +1,60 @@
+apiVersion: nvidia.com/v1beta1
+kind: DynamoGraphDeployment
+metadata:
+  name: efficient
+spec:
+  components:
+  - name: Frontend
+    type: frontend
+    replicas: 1
+    podTemplate:
+      spec:
+        containers:
+        - name: main
+          image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.4.0
+          envFrom:
+          - secretRef:
+              name: hf-token-secret
+
+  - name: VllmDecodeWorker
+    type: worker
+    replicas: 1
+    podTemplate:
+      spec:
+        volumes:
+        - name: hf-cache
+          hostPath:
+            path: /opt/hf-cache
+            type: DirectoryOrCreate
+        containers:
+        - name: main
+          image: nvcr.io/nvidia/ai-dynamo/vllm-runtime:1.4.0
+          securityContext:
+            runAsUser: 0
+          livenessProbe:
+            httpGet:
+              path: /live
+              port: system
+            initialDelaySeconds: 0
+            timeoutSeconds: 10
+            periodSeconds: 30
+            failureThreshold: 10
+          command: ["python3", "-m", "dynamo.vllm"]
+          args:
+          - --model
+          - /hf-cache/models--google--diffusiongemma-26B-A4B-it/snapshots/f7f5b7f5fa82ffc52addd066915886d497f5517b
+          - --served-model-name
+          - efficient
+          - --max-model-len
+          - "8192"
+          - --gpu-memory-utilization
+          - "0.90"
+          envFrom:
+          - secretRef:
+              name: hf-token-secret
+          volumeMounts:
+          - name: hf-cache
+            mountPath: /hf-cache
+          resources:
+            limits:
+              nvidia.com/gpu: "1"

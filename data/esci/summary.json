@@ -1,0 +1,15 @@
+{
+  "total": 50,
+  "excluded_both_wrong": 22,
+  "labeled": 28,
+  "routing_label_counts": {
+    "efficient": 23,
+    "capable": 5
+  },
+  "efficient_accuracy": 0.46,
+  "capable_accuracy": 0.42,
+  "avg_efficient_latency_s": 0.32,
+  "avg_capable_latency_s": 0.22,
+  "tuning_size": 28,
+  "eval_size": 0
+}
