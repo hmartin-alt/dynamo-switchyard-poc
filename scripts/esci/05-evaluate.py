@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+What it doesn't fix. When Switchyard sends a question to Qwen, Qwen will "think" first, which your direct Qwen calls didn't. That makes the comparison slightly unfair, and I haven't tested a fix for it.#!/usr/bin/env python3
 """
 Step 5: Evaluate routing accuracy comparing three configurations on the held-out eval set.
 
@@ -41,7 +41,7 @@ Given a search query and a product title, classify the relevance as exactly one 
 Return only a JSON object with a single field, for example: {"label": "Exact"}
 Do not include any other text or explanation."""
 
-DIFFUSION_MODELS = {"efficient"}   # models that don't support temperature
+DIFFUSION_MODELS = {"efficient", "shopping"}   # models that don't support temperature
 THINKING_MODELS  = {"capable"}     # Qwen3 models — disable thinking for clean JSON output
 
 def call_model(client, model_name, query, product_title, bullet_points=""):
@@ -91,7 +91,7 @@ for i, ex in enumerate(eval_examples):
 
     eff_label, eff_lat, _   = call_model(EFFICIENT,  "efficient",      q, pt, bp)
     cap_label, cap_lat, _   = call_model(CAPABLE,    "capable",        q, pt, bp)
-    sw_label,  sw_lat,  sw_model = call_model(SWITCHYARD, "shopping-router", q, pt, bp)
+    sw_label,  sw_lat,  sw_model = call_model(SWITCHYARD, "shopping", q, pt, bp)
 
     record = {
         "query": q,
