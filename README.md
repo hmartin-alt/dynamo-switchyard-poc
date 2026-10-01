@@ -64,7 +64,7 @@ source <repo-root>/.venv/bin/activate
 ## 1. Install Dynamo 1.4.0
 
 ```bash
-helm repo add dynamo https://nvidia.github.io/dynamo
+helm repo add dynamo https://helm.ngc.nvidia.com/nvidia/ai-dynamo
 helm repo update
 
 helm install dynamo-platform dynamo/dynamo-platform \
