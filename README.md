@@ -213,8 +213,6 @@ ROUTER_DEVICE=cpu model-router evaluate \
   --data <repo-root>/data/prefill-router/test.csv
 ```
 
-Target AUC > 0.70 before serving.
-
 ### Serve the router sidecar
 
 ```bash
@@ -275,30 +273,7 @@ eksctl scale nodegroup \
   -r $AWS_REGION
 ```
 
----
-
-## Repository Structure
-
-```
-manifests/
-  dynamo/
-    dgd-efficient.yaml         # DiffusionGemma worker deployment
-    dgd-capable.yaml           # Qwen3.6 worker deployment
-    prefetch-job.yaml          # Pre-downloads models to node host path
-switchyard/
-  routes.toml                  # Switchyard routing config
-configs/
-  prefill-router/
-    shopping-pool.yaml         # Prefill router pool + model-router collect config
-scripts/
-  esci/
-    01-download-sample.py      # Downloads ESCI; emits questions.txt + references.csv
-    02-classify-models.py      # Manual fallback: runs models with model-specific params
-    03-derive-routing-labels.py  # Manual fallback: derives routing labels from predictions
-    04-update-classifier-prompt.py  # Injects few-shot examples into Switchyard prompt
-    05-evaluate.py             # End-to-end accuracy evaluation vs Switchyard
-  prefill-router/
-    00-convert-to-csv.py       # Splits collected data into train/test CSVs
-checkpoints/                   # Trained router checkpoints (gitignored)
-data/                          # Collected samples and labels (gitignored)
-```
+## More Information on Switchyard
+- [Switchyard Repo](https://github.com/NVIDIA-NeMo/Switchyard)
+- [Prefill Routing ](https://github.com/NVIDIA-NeMo/Switchyard/blob/main/docs/routing_algorithms/prefill_routing.md)
+- [LLM Classifier](https://github.com/NVIDIA-NeMo/Switchyard/blob/fbabf51c62793ed0f6af042b60e92ce1cfba083b/docs/routing_algorithms/llm_classifier_routing.md)
